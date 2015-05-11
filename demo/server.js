@@ -16,4 +16,6 @@ swig.setDefaults({cache: false});
 
 app.use('/static', Advanced.Express.static(Path.join(__dirname, 'static')));
 
-app.listen(8586);
+app.listen(8586, function() {
+    console.log('App is listening on the port ' + 8586);
+});

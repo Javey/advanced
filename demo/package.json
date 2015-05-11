@@ -1,0 +1,8 @@
+{
+  "name": "advance-demo",
+  "version": "0.0.1",
+  "dependencies": {
+    "swig": "^1.4.2",
+    "advanced": "latest"
+  }
+}

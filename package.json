@@ -4,6 +4,11 @@
   "description": "A simple MVC framework based on Express",
   "main": "./lib/index.js",
   "bin": "./cli/advanced.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Javey/advanced"
+  },
   "dependencies": {
     "bluebird": "^2.9.25",
     "body-parser": "^1.12.3",

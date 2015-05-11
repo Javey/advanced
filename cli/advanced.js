@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var program = require('commander'),
     _package = require('../package'),
     advance = require('../lib/cli');

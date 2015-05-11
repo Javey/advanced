@@ -60,6 +60,20 @@ router.get('/test/add/:id(\\d+)', 'test@addTest');
 module.exports = router;
 ```
 
+Specify routes with group.
+
+```javascript
+var Router = require('advanced').Router,
+    router = Router();
+
+router.get('/group', function(router) {
+    router.get('/a', 'test@a'); // /group/a
+    router.get('/b', 'test@b'); // /group/b
+}
+
+module.exports = router;
+```
+
 ## Default router
 
 A simple router based on file of controller is supported.

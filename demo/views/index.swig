@@ -6,6 +6,6 @@
     <link type="text/css" rel="stylesheet" href="/static/css/test.css">
 </head>
 <body>
-    <h1>index page powered by Advance uses swig template engine</h1>
+    <h1>index page powered by Advanced uses swig template engine</h1>
 </body>
 </html>

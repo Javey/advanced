@@ -7,5 +7,21 @@ module.exports = Controller.extend({
 
     addTest: function() {
         this.res.send(this.req.params.id);
+    },
+
+    groupA: function() {
+        this.res.send('groupA');
+    },
+
+    groupB: function() {
+        this.res.send('groupB');
+    },
+
+    auth: function() {
+        if (Math.random() > 0.5) {
+            this.next();
+        } else {
+            this.res.send('Authorization failed!');
+        }
     }
 });

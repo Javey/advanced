@@ -2,8 +2,7 @@ var Advanced = require('advanced'),
     swig = require('swig'),
     Path = require('path');
 
-// set root path
-// In order to start app in any path.
+// Set root path. In order to start app in any path.
 Advanced.Utils.c('root', __dirname);
 
 var app = Advanced();
@@ -16,6 +15,6 @@ swig.setDefaults({cache: false});
 
 app.use('/static', Advanced.Express.static(Path.join(__dirname, 'static')));
 
-app.listen(8586, function() {
-    console.log('App is listening on the port ' + 8586);
+app.listen(Advanced.Utils.c('port'), function() {
+    console.log('App is listening on the port ' + Advanced.Utils.c('port'));
 });

@@ -7,5 +7,11 @@ module.exports = {
     defaultController: 'index',
     defaultAction: 'index',
 
-    api: 'http://127.0.0.1:9872'
+    port: '8586',
+
+    api: 'http://127.0.0.1:{port}',
+
+    mockDataPath: '{root}/mock',
+
+    env: 'development'
 };

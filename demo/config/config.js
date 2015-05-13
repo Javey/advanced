@@ -1,12 +1,19 @@
 var Path = require('path');
 
-var ROOT = Path.join(__dirname, '../');
 module.exports = {
-    //controllerPath: ROOT + '/app/controllers',
-    //routesPath: ROOT + '/app/routes.js',
-
+    //root: Path.join(__dirname, '../'),
+    //
+    //controllerPath: '{root}/app/controllers',
+    //routesPath: '{root}/app/routes.js',
+    //
     //defaultController: 'index',
     //defaultAction: 'index',
-
-    //api: 'http://127.0.0.1:9872'
+    //
+    //port: '8586',
+    //
+    //api: 'http://127.0.0.1:{port}',
+    //
+    //mockDataPath: '{root}/mock',
+    //
+    //env: 'development'
 };

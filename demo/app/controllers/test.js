@@ -10,6 +10,11 @@ module.exports = Controller.extend({
     },
 
     groupA: function() {
+        this.request({
+            data: '/test/api'
+        }).then(function(data) {
+            console.log(data);
+        });
         this.res.send('groupA');
     },
 
@@ -23,5 +28,10 @@ module.exports = Controller.extend({
         } else {
             this.res.send('Authorization failed!');
         }
+    },
+
+    api: function() {
+        console.log(this.req.cookies);
+        this.res.json({a: 1});
     }
 });

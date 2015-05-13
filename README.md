@@ -86,7 +86,13 @@ For example:
 req.path = '/this/is/a/path'
 ```
 
-1. is exists /this/is/a/path/index.js@index
-2. is exists /this/is/a/path.js@index
-3. is exists /this/is/a.js@path
-4. is exists /this/is.js@a, `this.req.params[0] = 'path'`
+1. is exists `/this/is/a/path/index.js@index`
+2. is exists `/this/is/a/path.js@index`
+3. is exists `/this/is/a.js@path`
+4. is exists `/this/is.js@a`, `this.req.params[0] = 'path'`
+
+# Mock data
+
+If set `env = 'development` in `config.js`, it will load the middleware of `mock`.
+
+For example. Assume that the request path is `/test/api`. If there is a json file which path is `/mock/test/api.json`, the json data will be sent by reading the file.

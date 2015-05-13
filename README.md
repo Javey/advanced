@@ -96,3 +96,7 @@ req.path = '/this/is/a/path'
 If set `env = 'development` in `config.js`, it will load the middleware of `mock`. The request which created by invoking `Cotroller::request` method will be mocked.
 
 For example. Assume that the request path is `/test/api`. If there is a json file which path is `/mock/test/api.json`, the json data will be sent by reading the file.
+
+# License
+
+MIT

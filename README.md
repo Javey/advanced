@@ -1,6 +1,6 @@
 # Advanced
 
-A simple MVC framework based on Express
+A simple MVC framework based on [Express](https://github.com/strongloop/express)
 
 # Install
 

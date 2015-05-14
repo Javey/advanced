@@ -110,7 +110,9 @@ For example: Visit [http://127.0.0.1:8586/?debug=true](http://127.0.0.1:8586/?de
 
 # Create http request in node
 
-Call `Controller::request` to make a request in node. A promise will be returned. The arguments pass to the function likes below.
+This method uses (request)[https://github.com/request/request] module.
+
+Call `Controller::request` to create a request in node. A promise will be returned. The arguments pass to the function likes below.
 
 The baseUrl is `Utils.c('api')` which assigned to `this._api`
 
@@ -130,7 +132,7 @@ The data returned likes bellow.
 }
 ```
 
-The response data will assign to the corresponding key totally. But you can filter the response data by overriding the `_filerData` method.
+The response data will be assigned to the corresponding key totally. But you can filter the response data by overriding the `_filerData` method.
 
 ```javascript
 module.exports = Controller.extend({

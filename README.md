@@ -112,6 +112,8 @@ For example: Visit [http://127.0.0.1:8586/?debug=true](http://127.0.0.1:8586/?de
 
 Call `Controller::request` to make a request in node. A promise will be returned. The arguments pass to the function likes below.
 
+The baseUrl is `Utils.c('api')` which assigned to `this._api`
+
 ```javascript
 {
     dataKey1: '/path1',
@@ -126,6 +128,7 @@ The data returned likes bellow.
     dataKey1: {...},
     dataKey2: {...}
 }
+```
 
 The response data will assign to the corresponding key totally. But you can filter the response data by overriding the `_filerData` method.
 
@@ -143,7 +146,7 @@ module.exports = Controller.extend({
             this.render('templates/index.swig', data);
         }.bind(this));
     }
-}
+})
 ```
 
 # License

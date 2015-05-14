@@ -104,7 +104,7 @@ Add `debug=true` to queryString. When you want render template, in development m
 For example: Visit [http://127.0.0.1:8586/?debug=true](http://127.0.0.1:8586/?debug=true) will get
 ```json
 {
-    test: 1
+    "test": 1
 }
 ```
 

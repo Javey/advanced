@@ -145,7 +145,7 @@ module.exports = Controller.extend({
             dataKey1: '/path1',
             datakey2: '/path2'
         }).then(function(data) {
-            this.render('templates/index.swig', data);
+            this.render('index.swig', data);
         }.bind(this));
     }
 })

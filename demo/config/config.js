@@ -16,4 +16,6 @@ module.exports = {
     //mockDataPath: '{root}/mock',
     //
     //env: 'development'
+
+    //isMock: true
 };

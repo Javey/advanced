@@ -15,6 +15,6 @@ module.exports = {
 
     env: 'development',
 
-    // 是否模拟数据
+    // 是否使用假数据
     isMock: false
 };

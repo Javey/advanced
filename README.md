@@ -110,7 +110,7 @@ For example: Visit [http://127.0.0.1:8586/?debug=true](http://127.0.0.1:8586/?de
 
 # Create http request in node
 
-This method uses (request)[https://github.com/request/request] module.
+This method uses [request](https://github.com/request/request) module.
 
 Call `Controller::request` to create a request in node. A promise will be returned. The arguments pass to the function likes below.
 

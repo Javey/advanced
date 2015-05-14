@@ -99,12 +99,50 @@ For example. Assume that the request path is `/test/api`. If there is a json fil
 
 # Debug template data
 
-Add `debug=true` to queryString. When you want render template, in development mode, it will output json data which will render the template.
+Add `debug=true` to query string. When you want render template, in development mode, it will output json data which will render the template.
 
 For example: Visit [http://127.0.0.1:8586/?debug=true](http://127.0.0.1:8586/?debug=true) will get
 ```json
 {
     "test": 1
+}
+```
+
+# Request in node
+
+Call `Controller::request` to make a request in node. A promise will be returned. The arguments pass to the function likes below.
+
+```javascript
+{
+    dataKey1: '/path1',
+    datakey2: '/path2'
+}
+```
+
+The data returned likes bellow.
+
+```javascript
+{
+    dataKey1: {...},
+    dataKey2: {...}
+}
+
+The response data will become the value of corresponding key totally. But you can filter the response data by overriding the `_filerData` method.
+
+```javascript
+module.exports = Controller.extend({
+    _filterData: function(data) {
+        return data.data;
+    },
+
+    index: function() {
+        this.request({
+            dataKey1: '/path1',
+            datakey2: '/path2'
+        }).then(function(data) {
+            this.render('templates/index.swig', data);
+        }.bind(this));
+    }
 }
 ```
 

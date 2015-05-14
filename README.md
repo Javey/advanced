@@ -108,7 +108,7 @@ For example: Visit [http://127.0.0.1:8586/?debug=true](http://127.0.0.1:8586/?de
 }
 ```
 
-# Request in node
+# Create http request in node
 
 Call `Controller::request` to make a request in node. A promise will be returned. The arguments pass to the function likes below.
 

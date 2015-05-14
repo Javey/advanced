@@ -13,5 +13,8 @@ module.exports = {
 
     mockDataPath: '{root}/mock',
 
-    env: 'development'
+    env: 'development',
+
+    // 是否模拟数据
+    isMock: false
 };

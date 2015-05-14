@@ -127,7 +127,7 @@ The data returned likes bellow.
     dataKey2: {...}
 }
 
-The response data will become the value of corresponding key totally. But you can filter the response data by overriding the `_filerData` method.
+The response data will assign to the corresponding key totally. But you can filter the response data by overriding the `_filerData` method.
 
 ```javascript
 module.exports = Controller.extend({

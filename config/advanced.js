@@ -9,7 +9,7 @@ module.exports = {
 
     port: '8586',
 
-    api: 'http://127.0.0.1:{port}',
+    api: '',
 
     mockDataPath: '{root}/mock',
 

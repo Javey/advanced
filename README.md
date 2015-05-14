@@ -97,6 +97,17 @@ If set `env = 'development` in `config.js`, it will load the middleware of `mock
 
 For example. Assume that the request path is `/test/api`. If there is a json file which path is `/mock/test/api.json`, the json data will be sent by reading the file.
 
+# Debug template data
+
+Add `debug=true` to queryString. When you want render template, in development mode, it will output json data which will render the template.
+
+For example: Visit [http://127.0.0.1:8586/?debug=true](http://127.0.0.1:8586/?debug=true) will get
+```json
+{
+    test: 1
+}
+```
+
 # License
 
 MIT

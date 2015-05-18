@@ -2,3 +2,4 @@
 node_modules
 .gitignore
 demo/node_modules
+demo/log

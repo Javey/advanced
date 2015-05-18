@@ -3,6 +3,7 @@ module.exports = {
 
     controllerPath: '{root}/app/controllers',
     routesPath: '{root}/app/routes.js',
+    logPath: '{root}/log',
 
     defaultController: 'index',
     defaultAction: 'index',

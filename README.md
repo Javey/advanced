@@ -99,7 +99,7 @@ For example. Assume that the request path is `/test/api`. If there is a json fil
 
 # Debug template data
 
-Add `debug=true` to query string. When you want render template, in development mode, it will output json data which will render the template.
+Add `debug=true` to query string. When you want render a template, in development mode, it will output json data that will be rendered to the template.
 
 For example: Visit [http://127.0.0.1:8586/?debug=true](http://127.0.0.1:8586/?debug=true) will get
 ```json
@@ -112,9 +112,9 @@ For example: Visit [http://127.0.0.1:8586/?debug=true](http://127.0.0.1:8586/?de
 
 This method uses [request](https://github.com/request/request) module.
 
-Call `Controller::request` to create a request in node. A promise will be returned. The arguments pass to the function likes below.
+Call `Controller::request` to create a request in node. A promise will be returned. The arguments pass to the function like below.
 
-> The baseUrl is `Utils.c('api')` which assigned to `this._api`
+> The baseUrl is `Utils.c('api')` which is assigned to `this._api`
 
 ```javascript
 {

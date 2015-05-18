@@ -17,5 +17,5 @@ module.exports = {
     //
     //env: 'development'
 
-    //isMock: true
+    isMock: true
 };

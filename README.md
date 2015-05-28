@@ -157,6 +157,29 @@ also can be passed to `request` method.
 1. `qs` object containing querystring values to be appended to the `uri`
 2. `form` object to be passed to destination like to submit a form.
 
+For example:
+
+```javascript
+module.exports = Controller.extend({
+    index: function() {
+        this.request({
+            dataKey1: {
+                uri: '/path1',
+                qs: {
+                    name: 'Javey'
+                },
+                form: {
+                    password: '123'
+                }
+            },
+            datakey2: '/path2'
+        }).then(function(data) {
+            this.render('index.swig', data);
+        }.bind(this));
+    }
+})
+```
+
 # Api Proxy
 
 ## Utils.proxy(req, res, host)

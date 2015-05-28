@@ -151,6 +151,19 @@ module.exports = Controller.extend({
 })
 ```
 
+You can pass data to destination when you create a request. Any `options` that can be passed to [request](https://github.com/request/request) module
+also can be passed to `request` method.
+
+1. `qs` object containing querystring values to be appended to the `uri`
+2. `form` object to be passed like to submit a form.
+
+# Api Proxy
+
+## Utils.proxy(req, res, host)
+
+You don't need to do anything, When you want to forward a request(`req`). The `apiProxy` middleware can do anything for you.
+It can forward a request which is created by AJAX to the `host` server transparently.
+
 # License
 
 MIT

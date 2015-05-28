@@ -155,7 +155,7 @@ You can pass data to destination when you create a request. Any `options` that c
 also can be passed to `request` method.
 
 1. `qs` object containing querystring values to be appended to the `uri`
-2. `form` object to be passed like to submit a form.
+2. `form` object to be passed to destination like to submit a form.
 
 # Api Proxy
 

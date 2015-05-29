@@ -3,3 +3,4 @@ node_modules
 demo/node_modules
 demo/log
 npm-debug.log
+test/app1/log

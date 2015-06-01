@@ -187,6 +187,37 @@ module.exports = Controller.extend({
 You don't need to do anything, When you want to forward a request(`req`). The `apiProxy` middleware can do anything for you.
 It can forward a request which is created by AJAX to the `host` server transparently.
 
+# Config
+
+Config file is placed in `config/`. If the filename starts with `config`, it will be loaded automatically.
+
+## Utils.c(key, [value])
+
+* @param `key` {String|Object}
+* @param `value` {*}
+* @return {*} The config you get or set.
+
+### Set config
+
+Use `Utils.c(key, value)` to set config. The `key` can be a object, if you want set a block of config.
+If the value depends the other one. You can specify it like below:
+
+```js
+var conf = {
+    a: 'a',
+    ab: '{a}b' // ab depends a
+}
+Utils.c(conf);
+```
+
+### Get config
+
+Use `Utils.c(key)` to get config. The `key` is a string.
+
+```js
+Utils.c('ab'); // the value is 'ab'
+```
+
 # License
 
 MIT

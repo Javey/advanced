@@ -66,7 +66,7 @@ Specify routes with group. It likes `router.use`. The difference is that you don
 var Router = require('advanced').Router,
     router = Router();
 
-router.get('/group', function(router) {
+router.group('/group', function(router) {
     router.get('/a', 'test@a'); // /group/a
     router.get('/b', 'test@b'); // /group/b
 }

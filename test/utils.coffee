@@ -120,3 +120,9 @@ describe 'Utils', ->
                 should.not.exist(err)
                 res.body.should.have.property('data').be.a.Array
                 done()
+
+    describe '#fs', ->
+        it 'should return true', ->
+            Utils.fs.existsAsync('./README.md')
+            .then (exists) ->
+                exists.should.be.true

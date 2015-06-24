@@ -16,6 +16,9 @@ module.exports = {
 
     env: 'development',
 
+    // api超时
+    timeout: 10000, //10s
+
     // 是否使用假数据
     isMock: false
 };

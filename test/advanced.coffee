@@ -122,6 +122,14 @@ describe 'Advanced', ->
             request(app, '/test/api')
             .then (res) -> res.body.should.be.eql({test: {a: 1}})
 
+        it 'should return mock data if regard the last path as param', ->
+            Advanced.Utils.c('env', 'development')
+            Advanced.Utils.c('isMock', true)
+            app = Advanced()
+
+            request(app, '/test/last')
+            .then (res) -> res.body.should.be.eql({test: {a: 1}})
+
         it 'should not mock data if not in development mode', ->
             Advanced.Utils.c('env', 'product')
             Advanced.Utils.c('isMock', true)

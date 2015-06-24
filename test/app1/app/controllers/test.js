@@ -17,9 +17,17 @@ module.exports = Controller.extend({
         }.bind(this))
     },
 
+    last: function() {
+        this.request({
+            test: '/test/123'
+        }).then(function(data) {
+            this.res.json(data);
+        }.bind(this));
+    },
+
     nofile: function() {
         this.request({
-            test: '/test/nofile'
+            test: '/nofile'
         }).then(function(data) {
             this.res.json(data);
         }.bind(this))

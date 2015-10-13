@@ -162,7 +162,7 @@ describe 'Advanced', ->
 
     describe '#Proxy', ->
         beforeEach ->
-            Advanced.Utils.c('api', 'http://127.0.0.1:3022')
+            Advanced.Utils.c('apis.defaults', 'http://127.0.0.1:3022')
 
         it 'post request should be proxied correctly', ->
             Advanced.Utils.c('isMock', false)

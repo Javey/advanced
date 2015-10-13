@@ -10,7 +10,10 @@ module.exports = {
 
     port: '8586',
 
-    api: '',
+    api: '', // @deprecated
+    apis: {
+        defaults: ''
+    },
 
     mockDataPath: '{root}/mock',
 

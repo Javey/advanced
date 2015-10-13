@@ -13,11 +13,16 @@ describe 'Utils', ->
 
         it 'should set a value correctly', ->
             Utils.c('root', 'test')
+            Utils.c('a.b', 'test')
             Utils.c('root').should.be.eql('test')
+            Utils.c('a.b').should.be.eql('test')
 
         it 'get a value nested', ->
             Utils.c('test', '{root}/test')
+            Utils.c('a.c', '{a.b}/cc')
             Utils.c('test').should.be.eql(Utils.c('root') + '/test')
+            Utils.c('a.c').should.be.eql(Utils.c('a.b') + '/cc')
+            Utils.c('a').should.be.eql({b: 'test', c: 'test/cc'})
 
         it 'should return all value', ->
             Utils.c().should.have.property('root', process.cwd())
@@ -50,7 +55,7 @@ describe 'Utils', ->
                 data.should.have.property('data').be.a.Array
 
         it 'request with relative uri', ->
-            Utils.c('api', 'http://127.0.0.1:3022')
+            Utils.c('apis.defaults', 'http://127.0.0.1:3022')
             Utils.request('/user')
             .then (data) ->
                 data.should.have.property('data').be.a.Array
@@ -94,7 +99,7 @@ describe 'Utils', ->
         it 'proxy use config without url', (done) ->
             app = Advanced.Express()
             app.use (req, res, next) ->
-                Utils.c('api', 'http://127.0.0.1:3022')
+                Utils.c('apis.defaults', 'http://127.0.0.1:3022')
                 Utils.proxy(req, res, next)
 
             request(app)
@@ -109,7 +114,7 @@ describe 'Utils', ->
         it 'proxy use config with url', (done) ->
             app = Advanced.Express()
             app.use (req, res, next) ->
-                Utils.c('api', 'http://127.0.0.1:3022')
+                Utils.c('apis.defaults', 'http://127.0.0.1:3022')
                 Utils.proxy(req, res, next, '/user')
 
             request(app)

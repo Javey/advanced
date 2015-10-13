@@ -114,7 +114,7 @@ This method uses [request](https://github.com/request/request) module.
 
 Call `Controller::request` to create a request in node. A promise will be returned. The arguments pass to the function like below.
 
-> The baseUrl is `Utils.c('api')` which is assigned to `this._api`
+> The baseUrl is `Utils.c('api.defaults')` which is assigned to `this._api`
 
 ```javascript
 {

@@ -69,6 +69,11 @@ describe 'Advanced', ->
 
             handle(router, '/group/a')
 
+        it 'should throw error if the last argument is not a function in group method', ->
+            router = Advanced.Router()
+
+            router.group.bind(router, '/group', 'test@test').should.throw('Route.group() requires callback functions but got a [object String]')
+
         it 'should support string as callback', ->
             router = Advanced.Router()
 

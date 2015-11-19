@@ -29,7 +29,7 @@
     "supertest": "^1.0.1"
   },
   "scripts": {
-    "test": "node_modules/.bin/mocha --compilers coffee:coffee-script/register test/utils.coffee",
+    "test": "node_modules/.bin/mocha --compilers coffee:coffee-script/register test/*.coffee",
     "test-server": "node test/app2/server.js"
   }
 }

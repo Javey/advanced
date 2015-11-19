@@ -1,5 +1,5 @@
 module.exports = {
-    root: process.cwd(),
+    root: global.__ROOT || process.cwd(),
 
     controllerPath: '{root}/app/controllers',
     routesPath: '{root}/app/routes.js',
@@ -14,6 +14,8 @@ module.exports = {
     apis: {
         defaults: ''
     },
+
+    isShowLog: true, // 是否打印日志到标准输出
 
     mockDataPath: '{root}/mock',
 

@@ -1,10 +1,10 @@
+// define root path
+global.__ROOT = __dirname;
+
 var Advanced = require('advanced'),
     Utils = Advanced.Utils,
     swig = require('swig'),
     Path = require('path');
-
-// Set root path. In order to start app in any path.
-Utils.c('root', __dirname);
 
 var app = Advanced(function(app) {
     app.engine('swig', swig.renderFile);
@@ -17,5 +17,5 @@ var app = Advanced(function(app) {
 });
 
 app.listen(Utils.c('port'), function() {
-    console.log('App is listening on the port ' + Utils.c('port'));
+    Advanced.Logger.log('App is listening on the port ' + Utils.c('port'));
 });

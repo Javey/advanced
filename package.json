@@ -1,6 +1,6 @@
 {
   "name": "advanced",
-  "version": "0.2.13",
+  "version": "0.3.0",
   "description": "A simple MVC framework based on Express",
   "main": "./lib/index.js",
   "bin": "./cli/advanced.js",
@@ -29,7 +29,7 @@
     "supertest": "^1.0.1"
   },
   "scripts": {
-    "test": "node_modules/.bin/mocha --compilers coffee:coffee-script/register test/*.coffee",
+    "test": "node_modules/.bin/mocha --compilers coffee:coffee-script/register test/utils.coffee",
     "test-server": "node test/app2/server.js"
   }
 }

@@ -136,7 +136,7 @@ describe 'Advanced', ->
             .then (res) -> res.body.should.be.eql({test: {a: 1}})
 
         it 'should not mock data if not in development mode', ->
-            Advanced.Utils.c('env', 'product')
+            Advanced.Utils.c('env', 'production')
             Advanced.Utils.c('isMock', true)
             app = Advanced()
 

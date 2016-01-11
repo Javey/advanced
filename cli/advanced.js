@@ -14,7 +14,7 @@ program
         console.log('Creating an application named "' + appname + '" in ' + process.cwd());
         advance.newApp(appname)
             .then(function() {
-                console.log('Done!')
+                console.log('Done!');
             })
             .catch(function(err) {
                 console.log('Failed!', err);

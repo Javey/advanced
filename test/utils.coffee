@@ -74,7 +74,7 @@ describe 'Utils', ->
         it 'proxy correctly', (done) ->
             app = Advanced.Express()
             app.use (req, res, next) ->
-                Utils.proxy(req, res, 'http://127.0.0.1:3022' + req.path)
+                Utils.proxy(req, res, next, 'http://127.0.0.1:3022' + req.path)
 
             request(app)
             .get('/user')
@@ -88,13 +88,11 @@ describe 'Utils', ->
         it 'proxy error', (done) ->
             app = Advanced.Express()
             app.use (req, res, next) ->
-                Utils.proxy(req, res, next, 'http://xxx')
+                Utils.proxy(req, res, next, 'http://127.0.0.1:2934')
             app.use (err, req, res, next) ->
                 res.status(500).end()
 
-            request(app)
-            .get('/user')
-            .expect(500, done)
+            request(app).get('/user').expect(500, done)
 
         it 'proxy use config without url', (done) ->
             app = Advanced.Express()

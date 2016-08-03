@@ -1,6 +1,6 @@
 {
   "name": "advanced",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "description": "A simple MVC framework based on Express",
   "main": "./lib/index.js",
   "bin": "./cli/advanced.js",

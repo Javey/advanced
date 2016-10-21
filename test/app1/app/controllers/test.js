@@ -2,11 +2,11 @@ var Controller = require('advanced').Controller;
 
 module.exports = Controller.extend({
     index: function() {
-        this.res.send('index')
+        this.res.send('index');
     },
 
     test: function() {
-        this.res.send('test')
+        this.res.send('test');
     },
 
     api: function() {
@@ -14,7 +14,7 @@ module.exports = Controller.extend({
             test: '/test'
         }).then(function(data) {
             this.res.json(data);
-        }.bind(this))
+        }.bind(this));
     },
 
     last: function() {
@@ -30,6 +30,6 @@ module.exports = Controller.extend({
             test: '/nofile'
         }).then(function(data) {
             this.res.json(data);
-        }.bind(this))
+        }.bind(this));
     }
 });

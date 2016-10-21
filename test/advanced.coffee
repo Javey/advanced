@@ -136,34 +136,36 @@ describe 'Advanced', ->
             .then (res) -> res.body.should.be.eql({test: {a: 1}})
 
         it 'should not mock data if not in development mode', ->
+            Advanced.Utils.c('apis.defaults', 'http://127.0.0.1:3022')
             Advanced.Utils.c('env', 'production')
             Advanced.Utils.c('isMock', true)
             app = Advanced()
 
             request(app, '/test/api')
-            .then (res) -> res.body.should.be.eql({})
+            .then (res) -> res.body.should.be.eql({test: {test: 1}})
 
         it 'should not mock data if isMock is false', ->
+            Advanced.Utils.c('apis.defaults', 'http://127.0.0.1:3022')
             Advanced.Utils.c('env', 'development')
             Advanced.Utils.c('isMock', false)
             app = Advanced()
 
             request(app, '/test/api')
-            .then (res) -> res.body.should.be.eql({})
+            .then (res) -> res.body.should.be.eql({test: {test: 1}})
 
-        it 'should return empty if does not exist json file for mocking when use request', ->
+        it 'should return error message if does not exist json file for mocking when use request', ->
             Advanced.Utils.c('env', 'development')
             Advanced.Utils.c('isMock', true)
             app = Advanced()
 
-            request(app, '/test/nofile').then (res) -> res.body.should.be.eql({})
+            request(app, '/test/nofile').then (res) -> res.body.test.should.match(/Mocking api \/nofile/)
 
-        it 'should return empty if does not exist json file for mocking when use proxy', ->
+        it 'should return error message if does not exist json file for mocking when use proxy', ->
             Advanced.Utils.c('env', 'development')
             Advanced.Utils.c('isMock', true)
             app = Advanced()
 
-            request(app, '/test/nofile').then (res) -> res.body.should.be.eql({})
+            request(app, '/test/nofile').then (res) -> res.body.test.should.match(/Mocking api \/nofile/)
 
     describe '#Proxy', ->
         beforeEach ->

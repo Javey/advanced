@@ -84,6 +84,7 @@ describe 'Utils', ->
                 should.not.exist(err)
                 res.body.should.have.property('data').be.a.Array
                 done()
+            true
 
         it 'proxy error', (done) ->
             app = Advanced.Express()
@@ -93,6 +94,7 @@ describe 'Utils', ->
                 res.status(500).end()
 
             request(app).get('/user').expect(500, done)
+            true
 
         it 'proxy use config without url', (done) ->
             app = Advanced.Express()
@@ -108,6 +110,7 @@ describe 'Utils', ->
                 should.not.exist(err)
                 res.body.should.have.property('data').be.a.Array
                 done()
+            true
 
         it 'proxy use config with url', (done) ->
             app = Advanced.Express()
@@ -123,6 +126,7 @@ describe 'Utils', ->
                 should.not.exist(err)
                 res.body.should.have.property('data').be.a.Array
                 done()
+            true
 
     describe '#fs', ->
         it 'should return true', ->

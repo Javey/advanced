@@ -184,6 +184,7 @@ describe 'Advanced', ->
             Request(app).get('/user').set('X-Requested-With', 'XMLHttpRequest').end (err, res) ->
                 res.body.should.have.property('data').be.a.Array
                 done()
+            1
 
         it 'should return 404 if the destination can not be reached to', ->
             Advanced.Utils.c('isMock', false)
